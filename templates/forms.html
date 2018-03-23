@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <form action='/story{% if story is defined %}/{{ story["id"] }}{% endif %}' method="post">
+        <label for="title"><h4>Story title</h4></label><input type="text" id="title" name="title" minlength="5" required {% if story is defined %}value="{{ story['title'] }}"{% endif %}">
+        <label for="userstory"><h4>User story:</h4></label><textarea id="userstory" required name="user_story">{% if story is defined %}{{ story["user_story"] }}{% endif %}</textarea>
+        <label for="acceptance"><h4>Acceptance criteria:</h4></label><textarea id="acceptance" required name="acceptance_criteria" value="">{% if story is defined %}{{ story["acceptance_criteria"] }}{% endif %}</textarea>
+        <label for="business"><h4>Business value:</h4></label><input id="business" min="100" max="1500" step="100" name="business_value" type="number" value="{% if story is defined %}{{ story['business_value'] }}{% endif %}">
+        <label for="estimation"><h4>Estimation:</h4></label><input id="estimation" min="0.5" max="40" step="0.5" name="estimation" type="number" value="{% if story is defined %}{{ story['estimation'] }}{% endif %}">
+        {% if story is defined %}
+        <p>
+        <select name="status" id="dropdown_status">
+            {% for element in statuses %}
+            <option {% if story is defined and story['status'] == element %} selected {% endif %} value="{{element}}">{{element}}</option>
+            {% endfor %}
+        </select>
+        </p>
+        {% endif %}
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>

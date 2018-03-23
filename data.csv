@@ -1,0 +1,15 @@
+id;title;user_story;acceptance_criteria;business_value;estimation;status
+1;List all User Stories;"As a User,
+I want to see all the previously saved User Stories,
+So that I get an overview of all requirements";"Given that there are any number ({0..n}) of saved User Stories,
+When I open the website (`/`),
+Then ensure I see a table with all the stored data";100;40;planning
+2;Add new User Stories;"As a User,
+I want to be able to add a new User Stories,
+So that I can extend the list of requirements";"When I open the website (`/`),
+And I click the ""Add User Story"" link
+Then ensure I see a form where I can add details of the new User Story,
+And if I submit the form, this User Story gets saved.";100;0.5;planning
+;['Update existing User Stories'];['As a User,\r\nI want to be able to change details of an existing User Story,\r\nSo that I can keep them up-to-date with the current info.'];['When I open the website (`/`),\r\nAnd I click the title of a User Story,\r\nThen ensure I see a form prefilled with the details of the User Story,\r\nAnd when I submit the changed data, ensure it gets save,\r\nAnd ensure it overwrites the previous details, not creating a new User Story.'];['100'];['2'];['todo']
+4;How to save millions of lifes with a mobile app;xxxx;hkjjnnlmmm;100;10;in progress
+5;NEW story;This is the new story;Acceptance;200;1;review

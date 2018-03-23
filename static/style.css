@@ -1,0 +1,51 @@
+h1 {
+    color: blue;
+    font-family: Helvetica;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    }
+
+h3 {
+    color: black;
+    font-family: Helvetica;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    }
+
+h4 {
+    color: black;
+    font-family: Helvetica;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    }
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    height: 40px;
+}
+
+
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-family: Helvetica;
+    font-variant: small-caps;
+    text-transform: uppercase;
+
+}
+
+td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+tr:nth-child(even) {background-color: #f2f2f2;}
